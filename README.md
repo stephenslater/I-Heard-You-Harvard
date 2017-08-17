@@ -1,14 +1,13 @@
 # I Heard You Harvard
-CS50 Final Project
-Harvard University, Fall 2013
-iheardyouharvard.com
+CS50 Final Project by Stephen Slater  
+Harvard University, Fall 2013   
+iheardyouharvard.com    
 
-
-    My project is iheardyouharvard.com. I Heard You Harvard is a site for people to share funny 
+My project is iheardyouharvard.com. I Heard You Harvard is a site for people to share funny 
 comments (anonymously) that they hear around Harvard campus--be they odd, humorous, disturbing, 
 out of context, or all four. 
 
-# Site Features
+### Site Features ###
 From the homepage of iheardyouharvard.com, users can access via clicking the menu bar:
 -	Submit a Story: here users will find text boxes to record the title of their story, 
     the location where they heard it, a pseudonym for themselves (often a funny phrase), and the story itself. After submissions are approved in the database, they will show up in all appropriate locations on the site (homepage, popular posts, favorites, your posts)
@@ -19,7 +18,7 @@ From the homepage of iheardyouharvard.com, users can access via clicking the men
 -	My Account: see features below.
 -	Contact Us: Here users can submit a quick form to send an email to the website’s administrator.
 
-# Account Features
+### Account Features ###
 For the user's My Account page (once logged in):
 -	Submit a Story: same form as above, except now that the user is logged in, the website will store 
     the post with the user’s unique id for access in the Your Posts section later.
@@ -31,11 +30,20 @@ For the user's My Account page (once logged in):
     anonymous account? For whatever reason, users can change their password here.
 -	Log Out: self-explanatory.
 
-    As far as the Homepage (and Your Posts and Favorites pages), users are able to vote on stories—but a given 
+### Notes ###
+As far as the Homepage (and Your Posts and Favorites pages), users are able to vote on stories—but a given 
 user is allowed just one upvote and one downvote per story (design explained in the design document). The way 
 I implemented this, I did not have to deal with IP addresses or cookies to ensure that one user never gets 
 to vote twice in the same direction.
 
-    There are also links to other entertaining online Harvard websites, like I Saw You Harvard, 
+There are also links to other entertaining online Harvard websites, like I Saw You Harvard, 
 cs50, and even one secret link (try it out for yourself!). These are in the footer of the page, for anyone who 
 wants “more harvard.”
+
+## Credits
+
+**Author:** Created and Designed by Stephen Slater
+
+---
+
+###### Copyright © 2013 iheardyouharvard.com. All rights reserved.
