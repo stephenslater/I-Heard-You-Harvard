@@ -1,0 +1,37 @@
+    For the most part, and wherever it seems possible, my design follows the MVC model. Just as in pset7, 
+I configure pages, manipulate my SQL, and render html. I have set up my SQL tables so that multiple 
+users can’t have the same username, and that each user can only upvote and downvote a given post one 
+time each. This latter feature was a bit tricky: I wanted to bar voting inflation, so I kept track of 
+whether a user had upvoted/downvoted/favorited a post before, and then compared the desired 
+upvote/downvote/favorite post with the user’s history of votes/favorites.
+
+    I have code in my files for javascript form validation, but I have commented it out. I have chosen to use 
+PHP because, since I’m keeping track of the votes and favorites in a database anyway, I can more easily update 
+my SQL tables with a SQL query function in PHP.
+
+    Also, when users vote and favorite, I have used the functions apology and notify (very similar) to tell 
+the user whether their vote was successful; I chose to do this rather than to reload the page where posts 
+are because built into apology and notify are hrefs that use javascript history. Have you ever been far 
+down on a website and for some reason the site reloaded and you found yourself at the top? I didn’t want 
+users to be sent to the top of the homepage after voting/favoriting a post at the bottom, so I made this 
+design choice to use functions that use javascript history because when they do go back (via the js history 
+button), they are taken to the same place on the site as when they clicked the button. This way, the user 
+is not sent back to the top, and doesn’t need to scroll way down to find where they left off.
+
+    The PHP voting system was very interesting. I gave the button a name attribute equal to a PHP variable, 
+and via $_POST in the voting php files I accessed that variable via array_keys($_POST)[0]. (Shout out to 
+the TF who held office hours at 4am in Kirkland on Saturday.)
+
+    Another design choice I made was to use a $_SESSION variable called fromacc to render the header of the 
+My Account features rather than those of the main Homepage. 
+
+    I have also included more pages in the if preg_match condition in config.php, so that if users try to 
+access pages that I haven’t allowed, they will be prompted to log in.
+
+    As far as I know, I had to query() in my template favorite_view.php because I was accessing the stories 
+marked as favorite by the user and printing them out as I went. If the user has more than one favorite 
+story, then I need to query within the foreach ($yourfavs as $each) loop. I did try to pass in the stories 
+via render, but something went wrong and the favorites page had PHP errors.
+ 
+    As far as visual design goes, I originally found a free CSS template online (see footer), except I have 
+made many, many, many changes.

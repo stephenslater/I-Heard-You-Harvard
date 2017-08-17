@@ -1,0 +1,56 @@
+/**
+ * styles.css
+ *
+ * Computer Science 50
+ * Problem Set 7
+ *
+ * Global CSS.
+ */
+
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+/* centers menu list on portfolio page */
+#middle ul
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 569px;
+}
+
+/* created a class for the port and hist pages */
+#middle .portandhist
+{
+    text-align: left;
+}
+
+.link
+{
+   color:aqua;
+   text-decoration: none; 
+   background-color: none;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}

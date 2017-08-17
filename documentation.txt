@@ -1,0 +1,42 @@
+I Heard You Harvard by Stephen Slater
+CS50 Final Project 2013
+TF: Katryna Cadle
+iheardyouharvard.com
+
+
+    My project is iheardyouharvard.com. I Heard You Harvard is a site for people to share funny 
+comments (anonymously) that they hear around Harvard campus—be they odd, humorous, disturbing, 
+out of context, or all four. 
+
+From the homepage of iheardyouharvard.com, users can access via clicking the menu bar:
+-	Submit a Story: here users will find text boxes to record the title of their story, 
+    the location where they heard it, a pseudonym for themselves (often a funny phrase), and the story itself. 
+-	Statistics (coming soon): Users can see statistics in a pie chart. Currently in the making 
+    is a pie chart showing the breakdown of the writers’ years in school (freshman, sophomore, junior, senior, other).
+-	Popular: this feature ranks the posts on the website in order of the highest total amount of votes 
+    for the given post (including both upvotes and downvotes).
+-	Log In/Log Out: users can choose to register and log in to the site. If the user is currently logged in,
+    this link will display Log Out.
+-	My Account: see features below.
+-	Contact Us: Here users can submit a quick form to send an email to the website’s administrator.
+
+For the user's My Account page (once logged in):
+-	Submit a Story: same form as above, except now that the user is logged in, the website will store 
+    the post with the user’s unique id for access in the Your Posts section later.
+-	Your Posts: this is a history of a user’s posts that were submitted while the user was logged in.
+-	Favorites: this is perhaps one of the coolest features of the site. Users have the ability to 
+    mark posts in the Homepage and Your Posts as favorites, and then when the users view Favorites within 
+    My Account, they will see a record of the posts the have marked as favorites.
+-	Change Password: Not happy with your previous password? Afraid someone is going to hack your 
+    anonymous account? For whatever reason, users can change their password here.
+-	Log Out: self-explanatory.
+
+    As far as the Homepage (and Your Posts and Favorites pages), users are able to vote on stories—but a given 
+user is allowed just one upvote and one downvote per story (design explained in the design document). The way 
+I implemented this, I did not have to deal with IP addresses or cookies to ensure that one user never gets 
+to vote twice in the same direction.
+
+    There are also links to other entertaining online Harvard websites, like Harvard FML, I Saw You Harvard, 
+cs50, and even one secret link (try it out for yourself!). These are in the footer of the page, for anyone who 
+wants “more harvard.”
+
