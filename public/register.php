@@ -24,28 +24,28 @@
             return false;
         }
 
+        $password = crypt($_POST["password"]);
         $sql = "INSERT INTO users (username, hash) VALUES (?, ?)";
         $stmt = mysqli_prepare($mysqli, $sql);
-        mysqli_stmt_bind_param($stmt, "ss", $_POST["username"], crypt($_POST["password"]));
+        mysqli_stmt_bind_param($stmt, "ss", $_POST["username"], $password);
         $submit = mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        $mysqli->close();
 
         // if couldn't add new user, not unique
-        if ($result === false)
+        if ($submit === false)
         {
             apologize("Username might already exist, or another problem.");
         }
-        
+
         // remembers id
         else
         {
             $rows = query("SELECT LAST_INSERT_ID() AS id");
-            $id = $rows[0]["id"];
+            $id = $rows[0][0];
             $_SESSION["id"] = $id;
             
-            notify("Congrats on registering an account, " . $_POST["username"] . "! Now you can see and record your own posts and favorite posts after going to your My Account page. Redirecting you to log in...");
-            sleep(3);
-            // sends user to index, and they'll have to log in
-            redirect("login.php");
+            notify("Congrats on registering an account, " . $_POST["username"] . "! Now you can see and record your own posts, including those you've favorited, after going to your My Account page. Click the log in button above to enter your account.");
         }
     }
 
