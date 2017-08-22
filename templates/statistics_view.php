@@ -3,6 +3,8 @@
     <table style="margin-left:auto;margin-right:auto">
       <tr>
         <td><div id="piechart_3d1" style="border: 1px solid #ccc"></div></td>
+      </tr>
+      <tr>
         <td><div id="piechart_3d2" style="border: 1px solid #ccc"></div></td>
       </tr>
     </table>
