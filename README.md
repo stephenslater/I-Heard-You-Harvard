@@ -42,7 +42,7 @@ wants “more harvard.”
 
 ## Credits
 
-**Author:** Created and Designed by Stephen Slater
+**Author:** Created and Designed by *Stephen Slater*
 
 ---
 
